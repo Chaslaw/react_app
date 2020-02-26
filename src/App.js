@@ -1,14 +1,22 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
+import './App.scss';
+
+import { Header } from './components/Header/Header';
 
 class App extends Component {
 
-    render() {
+   render() {
         return (
-
-            <div>This is some React app</div>
+            <Fragment>
+                <Header background="black" />
+            
+            </Fragment>
         )
     }
 
 }
 
 export default App;
+
+
+
