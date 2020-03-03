@@ -7,10 +7,12 @@ header {
 
 &.black {
     background-color: black;
+    border-bottom: red 2px ;
 }
 
 &.gray {
     background-color: #333;
+    border-bottom: red 2px solid ;
 }
 
 .logo {

@@ -4,21 +4,27 @@ import logo from '../../img/logo.png';
 
 import { Search } from '../Search/Search';
 
-import { Navbar } from '../Navbar/Navbar';
 
-const Header = props => {
+
+const Header = ({black, search, data, onDataFilter}) => {
 
     const renderSearch = () => {
-        if(props.search) {
-            return <Search />
+        if(search) {
+            return <Search data={data} onDataFilter={onDataFilter} />
         } return null
+    }
+
+    const getClass = () => {
+        if(black){
+            return 'header black'
+        }
     }
     
     return (
         
-            <header className={`header ${props.black ? 'black' : 'gray'}`}> 
+            <header className={getClass()}> 
                 <img className="logo" src={logo} />
-                <Navbar />
+                
                 {renderSearch()}
                 
             </header>
